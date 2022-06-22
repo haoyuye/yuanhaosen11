@@ -1,0 +1,29 @@
+server:
+  port: 8080
+spring:
+  application:
+    name: ruijiwaimai
+  datasource:
+    druid:
+      driver-class-name: com.mysql.cj.jdbc.Driver
+      url: jdbc:mysql://localhost:3306/ruijiwaimai?serverTimezone=Asia/Shanghai&useUnicode=true&characterEncoding=utf-8&zeroDateTimeBehavior=convertToNull&useSSL=false&allowPublicKeyRetrieval=true
+      username: root
+      password: 123456
+mybatis-plus:
+  configuration:
+    #在映射实体或者属性时，将数据库中表名和字段名中的下划线去掉，按照驼峰命名法映射
+    map-underscore-to-camel-case: true
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+  global-config:
+    db-config:
+      id-type: ASSIGN_ID
+
+
+takeout:
+  baseUrl: D:\ruijiwaimai\
+
+alipay:
+  appId: 2021000121600064
+  appPrivateKey: MIIEvAIBADANBgkqhkiG9w0BAQEFAASCBKYwggSiAgEAAoIBAQCBW8gqKeROrnZBmfGZkT+klWLdvfuicEk+ZYrOZBfYU9eSQhdL0g5xl3OsAzg73n6SrcZlAoqG8CFJKaniPN+ui1VFmcqv8r/+nKe+Bj+Wfnj3VZR+l32xicBBIAL0uPHBQBUWi+55LnTSOqxRA1hkkdv5NrZhn1x4AHUCHuKjdMyvEf8Ok+dWU2SyYtuO2M79caJZyeyvaO91yDpmJ3a6AcYlLGnv3/USraTA0Dsa+a+d7DGSLz1NcpgIj+NcxqtVPonY0HFChKbgpl4SN/C3zw8FA2mdYQNQy0wowGOJqcJYBle9OoOCcFhqpHX0ZUUA08Cv3CotSnzA9pkfPC3DAgMBAAECggEALBzthJtmlQJfp31k63ah2nFrFq0r+7gI8jNUg4+UphvpXqIVKbEHZes88gLjEV+NkF2cU2Prc5q97yI7IcCakv5G5QZOHXRNzvkDJwUgeCTHAal4izcEESAlpM/S0jujjcBZsKelekPCaNLDYpkecqVe+3yR83aR5QZa4I9BwHWe3Lmm/f6XbUVOqLO52+oLAsrNrrls1vaHRSatgq4o93YzTtTwq0ITVin8hBkqILpT2uzktnzGPaV3oAMvM60TLFfXeMZxb+tg1RBKA2OcMSbEJvAe/0s+J/LEHvbmSjLVxJ/Ub8YD1zYhUb5+Hpqi43o4Y39xT1H0hBgKFjnEeQKBgQDCAyZwvoH9BsarjIOALlujOfH9K73KpLbsfEFKJPffIYeA2eJTgtJd0fCFKLJp/Srqc177djzZKlsdzHblxfvyF6laXkg9SfsyNLh/kH+tVdFQNA800asxCsQ/KazGK6xzgRPFl739c5wHQ+0XvKkKe72/OUYEtS+b2fv0Fbu1BwKBgQCqsGeLVq8gI0HytRvGF7IdfjkXMYRU5V80CeV6RILzo1iemwuYxCVOfX2ToPxsiMzlehWJjUvmopXXkr4nGi9dqtNaGxTXPcVdzZTgibJPxJrRzMryg64+pNDP7FwHMg85MlB/kk/X7uTlslPlvJDygM/nn/CSU09DNJzCogWuZQKBgErwMI7n5wm27lIg6kI+pcK8hQ4HMT3utYFO1WEwOlYDe3V3s4YSR/NZPhAREikCUutQOOXkW8h+JceyzFIgURrHrPBs7nZN9ysDVihfxhFLzpeuJBmAyyEcSYUkMcox4GCVAPAXlpkpaKEdyZybkKet+DK+ip8S5RrL7hfvtRtNAoGAM0OF5ahkMm/EZ8OTEtydBxSYyul5SBIXlMaAIEehWNEvVXtVcU0/syInbAZGqcYwW59eBpDkQeGExVjyOUY5AZXDomVNzhNkSnbrBsD0R9bRdL9gGJQJ6hCQElJ3lUWootIEsTvdNQovvvjfD7mhguPDDVrQ4vGYdaPAjQgiUq0CgYApnfSv6Qt8UT4Q3nERcAM41vpCiE9HO80+woT0YByQCdDMJ1kRlfrfx4zaPjbXoUyyrogv2lrCH59dCawrIaA4yWCPLV+fRK33BTARh2ZcCA/yDcMw2tIwpAsvic8RPE6K0zh1lN/Z947gO/kyTXK3kQV5cfGkiz2QZG3yTUjEDQ==
+  alipayPublicKey: MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAkAaKfWdlhiHGqxT2vb/ohYrJWwYNyc6d8KeiShP2b5UfXAksO/4dauj6u6bDPFRfgnjQDRjbG9QhHQg/CnFzTMPlol80iBqWQggCjA1KiAcRlQ48vULCXvJtuKV7IG09ZMERCTYtEslJ9w/fpm/K9B6RtmPIDRBdWidG4ZEHufAzIAQs7OlzswgrO2wbPdNx2nOybImSdK035o5IAGjvH7G80BpqHIRldNcIXxQr3xNKI+8SXL4Gc9SrsoeeM1tsEu6PWkeSARVzwSMH1XrWq0XavQzWqtcBCBER2jjssiyGgVdT+BUZi905nbroEbOPJ4A5FakP50HZaFkMfGJ0HQIDAQAB
+  notifyUrl:  http://tugqcr.natappfree.cc/alipay/notify
